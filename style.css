@@ -1,0 +1,68 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+
+
+body{
+    padding: 0;
+    margin: auto;
+    background: linear-gradient(to RIGHT , #00FFEA,#FF00AA);
+}
+.swap{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    
+}
+.swap > button{
+    cursor: pointer;
+    padding: 30px;
+    
+ 
+    font-size: 2rem;
+    outline: none;
+    border: 3px solid white;
+    background-color: chartreuse;
+    border-radius: 50px;
+
+}
+.swap>button:hover{
+    background-color: rgb(127,255,120);
+}
+
+.output{
+    font-size: 3rem;
+    background-color: white;
+    
+    display: flex;
+    
+    padding: 40px;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+
+.main>button{
+    margin: 20px;
+    border-radius: 6px;
+    font-size: 2rem;
+    color: white;
+    background-color: teal;
+}
+.main>button:hover{
+    background-color: thistle;
+
+}
+.change>button{
+    background-color: red;
+    color: rgb(127,255,120);
+    border-radius: 2000%
+}
+
+
+
