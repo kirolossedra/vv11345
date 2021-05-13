@@ -57,15 +57,23 @@ function TranslateP(x){
 
   if(flage==0){
     p=Literate(x)
-    for(var n=0; n<eng.length; n++){
-      if(x==eng[n].toLowerCase()){
-        p=egp[n]
-        break
-  
-      }
+    var y=x.split("")
+    var sum=""
+    for(var n=0; n<y.length; n++){
+      sum=sum+y[n]
       
-    }
+      for(var m=0; m<eng.length; m++){
+        if(sum==eng[m].toLowerCase()){
+          p=egp[m]
+          
+        }
+      }
+
+
   }
+}
+    
+  
   if(flage==1){
     
     for(var n=0; n<egp.length; n++){
