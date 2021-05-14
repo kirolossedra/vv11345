@@ -61,12 +61,22 @@ function TranslateP(x){
     var sum=""
     for(var n=0; n<y.length; n++){
       sum=sum+y[n]
+      var ina =0
       
       for(var m=0; m<eng.length; m++){
         if(sum==eng[m].toLowerCase()){
-          p=egp[m]
+          ina =1
           
         }
+      }
+      if(ina == 1){
+        var arr1=[]
+        for(var m=0; m<eng.length; m++){
+          if(sum==eng[m].toLowerCase()){
+            arr1.push(m)
+          }
+        }
+        p=egp[arr1[0]]
       }
 
 
@@ -87,8 +97,22 @@ function TranslateP(x){
 
   }
   if(flage==2){
-    
-    p=searchall(x)
+    var arr2=[]
+    for(var n=0; n<eng.length; n++){
+      if(x==eng[n].toLowerCase()){
+        arr2.push(n)
+      }
+
+    }
+    if(arr2.length==0){
+      p=Literate(x)
+    }
+    else{
+      p=""
+      for(var n=0; n<arr2.length; n++){
+        p=p+egp[arr2[n]]+"<br>"
+      }
+    }
   }
   
   return p;
@@ -99,12 +123,26 @@ function TranslateP(x){
 function TranslateA(x){
   y=x.split(" ")
   var sum = ""
-  for(var n=0; n<y.length; n++){
-    sum=sum+TranslateP(y[n])+" "
-
-
+  if(flage!=2){
+    for(var n=0; n<y.length; n++){
+      sum=sum+TranslateP(y[n])+" "
   
+  
+    
+    }
   }
+  else{
+    if(y.length>1){
+      alert("Only one word allowed in this mode");
+      document.getElementById("myInput").value=y[0]
+      
+
+    }
+    else{
+      sum=TranslateP(x)
+    }
+  }
+
   return sum
  
 
@@ -134,6 +172,19 @@ function edit(x){
   return nt.toLowerCase()
 
 
+}
+function check(){
+   
+   var checkBox = document.getElementById("myCheck");
+   
+   
+   
+   if (checkBox.checked == true){
+     flage=2
+   } else {
+     flage=0
+    
+   }
 }
 
 function Literate(x){
