@@ -12,10 +12,12 @@ body{
     background: linear-gradient(to RIGHT , #00FFEA,#FF00AA);
 }
 .swap{
-    display: grid;
+    display: inline;
     justify-content: center;
     align-items: center;
+    
     min-height: 50vh;
+    
     
 }
 .swap > button{
@@ -26,8 +28,8 @@ body{
     font-size: 2rem;
     outline: none;
     border: 3px solid white;
-    background-color: chartreuse;
-    border-radius: 50px;
+    background-color: yellow;
+    border-radius: 100%;
 
 }
 .swap>button:hover{
@@ -63,6 +65,22 @@ body{
     color: rgb(127,255,120);
     border-radius: 2000%
 }
+.inpo{
+    font-size: 1rem;
+    background-color: white;
+    
+    display: flex;
+    
+    padding: 40px;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+
+
 
 
 
